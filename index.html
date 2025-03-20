@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image-Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="contanier">
+        <header class="header">
+            <div class="logo-wrapper">
+                <div class="logo">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h1>AI Image Generator</h1>
+            </div>
+
+            <button class="theme-toggle">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </header>
+
+        <div class="main-content">
+            <form action="#" class="prompt-form">
+                <div class="prompt-container">
+                    <textarea class="prompt-input" placeholder="Describe your imagination in detail..." required
+                        autofocus></textarea>
+                    <button type="button" class="prompt-btn">
+                        <i class="fa-solid fa-dice"></i>
+                    </button>
+                </div>
+
+                <div class="prompt-actions">
+                    <div class="select-wrapper">
+                        <select class="custom-select" id="model-select" required>
+                            <option value="" selected disabled>Select Model</option>
+                            <option value="black-forest-labs/FLUX.1-dev">FlUX.1-dev</option>
+                            <option value="black-forest-labs/FLUX.1-schnell">FlUX.1-schnell</option>
+                            <option value="stabilityai/stable-diffusion-v1-5">Stable stable-diffusion-v1.5</option>
+                            <option value="propthero/openjourney">Openjourney</option>
+                        </select>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select class="custom-select" id="count-select" required>
+                            <option value="" selected disabled>Image Count</option>
+                            <option value="1">1 Image</option>
+                            <option value="2">2 Image</option>
+                            <option value="3">3 Image</option>
+                            <option value="4">4 Image</option>
+                        </select>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select class="custom-select"  id="ratio-select"required>
+                            <option value="" selected disabled>Aspect Ratio</option>
+                            <option value="1/1">Square (1:1)</option>
+                            <option value="16/9">Landscape (16:9)</option>
+                            <option value="9/16">Portrait (9:16)</option>
+                        </select>
+                    </div>
+
+                    <button class="generate-btn">
+                        <i class="fa-solid fa-wand-sparkles"></i>
+                        Generate
+                    </button>
+                </div>
+
+                <div class="gallery-grid">
+                    
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
