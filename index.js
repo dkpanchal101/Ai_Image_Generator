@@ -118,7 +118,7 @@ const generateImages = async (selectedModel, imageCount, aspectRatio, promptText
         try {
             const response = await fetch(MODEL_URL, {
                 headers: {
-                    Authorization: `${API_KEY}`, //Bearer
+                    Authorization: ` Bearer ${API_KEY}`,
                     "Content-Type": "application/json",
                     "x-use-cache": "false",
                 },
